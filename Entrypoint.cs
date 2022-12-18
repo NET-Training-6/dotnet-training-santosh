@@ -41,19 +41,44 @@ class Entrypoint
         // {
         //     Console.WriteLine(number + " is Odd");
         // }
-        Console.WriteLine("Please Enter Principal : ");
-        var princial = int.Parse(Console.ReadLine());
 
-        Console.WriteLine("Please Enter Time in years : ");
-        var time = int.Parse(Console.ReadLine());
+        //Interest Calculator
 
-        Console.WriteLine("Please Enter Rate : ");
-        var rate = int.Parse(Console.ReadLine());
+        // Console.WriteLine("Please Enter Principal : ");
+        // var princial = int.Parse(Console.ReadLine());
 
-        var interest = (princial * time * rate) / 100;
+        // Console.WriteLine("Please Enter Time in years : ");
+        // var time = int.Parse(Console.ReadLine());
 
-        Console.WriteLine("The intrest for the provided values  is : " + interest);
-        Console.WriteLine("Press any key to exit");
-        Console.ReadLine();
+        // Console.WriteLine("Please Enter Rate : ");
+        // var rate = int.Parse(Console.ReadLine());
+
+        // var interest = (princial * time * rate) / 100;
+
+        // Console.WriteLine("The intrest for the provided values  is : " + interest);
+        // Console.WriteLine("Press any key to exit");
+        // Console.ReadLine();
+
+        Console.WriteLine("Please Enter Number To Check If It Is Divisible By 3 And 5 : ");
+        var number = int.Parse(Console.ReadLine());
+        if (number % 3 == 0 && number % 5 == 0)
+        {
+            Console.WriteLine(number + " is divisible by both 3 and 5 \n\n");
+        }
+        else
+        {
+            Console.WriteLine(number + " is not divisible by both 3 and 5\n\n");
+        }
+
+        Console.WriteLine("BMI Calculator");
+        Console.WriteLine("Please Enter Height In Meters : ");
+        var height = float.Parse(Console.ReadLine());
+
+        Console.WriteLine("Please Enter Weight In Kg : ");
+        var weight = float.Parse(Console.ReadLine());
+
+        var bmi = weight / (height * height);
+        Console.WriteLine("BMI for provided values is : " + bmi);
+        Console.ReadKey();
     }
 }
