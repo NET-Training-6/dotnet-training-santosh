@@ -59,26 +59,42 @@ class Entrypoint
         // Console.WriteLine("Press any key to exit");
         // Console.ReadLine();
 
-        Console.WriteLine("Please Enter Number To Check If It Is Divisible By 3 And 5 : ");
-        var number = int.Parse(Console.ReadLine());
-        if (number % 3 == 0 && number % 5 == 0)
-        {
-            Console.WriteLine(number + " is divisible by both 3 and 5 \n\n");
-        }
-        else
-        {
-            Console.WriteLine(number + " is not divisible by both 3 and 5\n\n");
-        }
+        // Console.WriteLine("Please Enter Number To Check If It Is Divisible By 3 And 5 : ");
+        // var number = int.Parse(Console.ReadLine());
+        // if (number % 3 == 0 && number % 5 == 0)
+        // {
+        //     Console.WriteLine(number + " is divisible by both 3 and 5 \n\n");
+        // }
+        // else
+        // {
+        //     Console.WriteLine(number + " is not divisible by both 3 and 5\n\n");
+        // }
 
-        Console.WriteLine("BMI Calculator");
-        Console.WriteLine("Please Enter Height In Meters : ");
-        var height = float.Parse(Console.ReadLine());
+        // Console.WriteLine("BMI Calculator");
+        // Console.WriteLine("Please Enter Height In Meters : ");
+        // var height = float.Parse(Console.ReadLine());
 
-        Console.WriteLine("Please Enter Weight In Kg : ");
-        var weight = float.Parse(Console.ReadLine());
+        // Console.WriteLine("Please Enter Weight In Kg : ");
+        // var weight = float.Parse(Console.ReadLine());
 
-        var bmi = weight / (height * height);
-        Console.WriteLine("BMI for provided values is : " + bmi);
+        // var bmi = weight / (height * height);
+        // Console.WriteLine("BMI for provided values is : " + bmi);
+
+        Console.Write("Enter Principle : ");
+        var principle = float.Parse(Console.ReadLine());
+
+        Console.Write("Enter Time : ");
+        var time = float.Parse(Console.ReadLine());
+
+        Console.Write("Enter Rate : ");
+        var rate = float.Parse(Console.ReadLine());
+
+
+        var compoundInterest = principle * Math.Pow((1 + rate / 100), time) - principle;
+        Console.WriteLine($"The compound interest for {principle} for {time} years at {rate} is {compoundInterest}");
         Console.ReadKey();
+        Person person1 = new();
+        person1.name = "Santosh Poudel";
+        person1.age = 28;
     }
 }
