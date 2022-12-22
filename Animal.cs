@@ -1,14 +1,14 @@
-class Animal
+public class Animal
 {
-    string name;
-    byte age;
-    string type;
-    Person owner;
-    string bark;
+    public string color;
+    public byte age;
+    public string type;
+    public string habitat;
+    public Boolean hasLegs;
 
-    Boolean isWildAnimal;
+    public Boolean isWild;
 
-    void run()
+    void move()
     {
         Console.WriteLine("Running");
     }

@@ -96,5 +96,67 @@ class Entrypoint
         Person person1 = new();
         person1.name = "Santosh Poudel";
         person1.age = 28;
+
+        Animal animal1 = new Animal()
+        {
+            color = "Orange/Black",
+            age = 6,
+            type = "Tiger",
+            habitat = "Jungle",
+            hasLegs = true,
+            isWild = true,
+
+        };
+        Animal animal2 = new Animal()
+        {
+            color = "Orange",
+            age = 6,
+            type = "Lion",
+            habitat = "Wild",
+            hasLegs = true,
+            isWild = true,
+
+        };
+        Animal animal3 = new Animal()
+        {
+            color = "White",
+            age = 8,
+            type = "Dog",
+            habitat = "Domestic",
+            hasLegs = true,
+            isWild = false,
+
+        };
+        Animal animal4 = new Animal()
+        {
+            color = "Dotted",
+            age = 4,
+            type = "Leopard",
+            habitat = "Wild",
+            hasLegs = true,
+            isWild = true,
+
+        };
+        Animal animal5 = new Animal()
+        {
+            color = "Blue",
+            age = 6,
+            type = "Whale",
+            habitat = "Ocean",
+            hasLegs = false,
+            isWild = true,
+
+        };
+        Animal animal6 = new Animal()
+        {
+            color = "Blue",
+            age = 6,
+            type = "Dolphin",
+            habitat = "Aquatic",
+            hasLegs = false,
+            isWild = true,
+
+        };
+
     }
 }
