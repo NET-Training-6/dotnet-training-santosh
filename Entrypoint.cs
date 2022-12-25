@@ -1,3 +1,5 @@
+using Basics;
+
 class Entrypoint
 {
     static void Main()
@@ -80,83 +82,37 @@ class Entrypoint
         // var bmi = weight / (height * height);
         // Console.WriteLine("BMI for provided values is : " + bmi);
 
-        Console.Write("Enter Principle : ");
-        var principle = float.Parse(Console.ReadLine());
+        // Console.Write("Enter Principle : ");
+        // var principle = float.Parse(Console.ReadLine());
 
-        Console.Write("Enter Time : ");
-        var time = float.Parse(Console.ReadLine());
+        // Console.Write("Enter Time : ");
+        // var time = float.Parse(Console.ReadLine());
 
-        Console.Write("Enter Rate : ");
-        var rate = float.Parse(Console.ReadLine());
+        // Console.Write("Enter Rate : ");
+        // var rate = float.Parse(Console.ReadLine());
 
 
-        var compoundInterest = principle * Math.Pow((1 + rate / 100), time) - principle;
-        Console.WriteLine($"The compound interest for {principle} for {time} years at {rate} is {compoundInterest}");
+        // var compoundInterest = principle * Math.Pow((1 + rate / 100), time) - principle;
+        // Console.WriteLine($"The compound interest for {principle} for {time} years at {rate} is {compoundInterest}");
+        // Console.ReadKey();
+        LearnArray arraytest = new LearnArray();
+        arraytest.LearnArrays();
+
+        string[] names = new string[10] { "ram", "shyam", "hari", "sita", "gita", "ramesh", "krishna", "sudip", "nagendra", "baje" };
+        foreach (var name in names)
+        {
+            Console.WriteLine(name);
+        }
+        int[] salaries = new int[6] { 15000, 14000, 13500, 12000, 18000, 14000 };
+        int maxSalary = 0;
+        foreach (int salary in salaries)
+        {
+            if (salary > maxSalary)
+            {
+                maxSalary = salary;
+            }
+        }
+        Console.WriteLine(maxSalary);
         Console.ReadKey();
-        Person person1 = new();
-        person1.name = "Santosh Poudel";
-        person1.age = 28;
-
-        Animal animal1 = new Animal()
-        {
-            color = "Orange/Black",
-            age = 6,
-            type = "Tiger",
-            habitat = "Jungle",
-            hasLegs = true,
-            isWild = true,
-
-        };
-        Animal animal2 = new Animal()
-        {
-            color = "Orange",
-            age = 6,
-            type = "Lion",
-            habitat = "Wild",
-            hasLegs = true,
-            isWild = true,
-
-        };
-        Animal animal3 = new Animal()
-        {
-            color = "White",
-            age = 8,
-            type = "Dog",
-            habitat = "Domestic",
-            hasLegs = true,
-            isWild = false,
-
-        };
-        Animal animal4 = new Animal()
-        {
-            color = "Dotted",
-            age = 4,
-            type = "Leopard",
-            habitat = "Wild",
-            hasLegs = true,
-            isWild = true,
-
-        };
-        Animal animal5 = new Animal()
-        {
-            color = "Blue",
-            age = 6,
-            type = "Whale",
-            habitat = "Ocean",
-            hasLegs = false,
-            isWild = true,
-
-        };
-        Animal animal6 = new Animal()
-        {
-            color = "Blue",
-            age = 6,
-            type = "Dolphin",
-            habitat = "Aquatic",
-            hasLegs = false,
-            isWild = true,
-
-        };
-
     }
 }

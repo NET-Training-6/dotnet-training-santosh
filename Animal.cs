@@ -1,3 +1,5 @@
+namespace Basics;
+
 public class Animal
 {
     public string color;

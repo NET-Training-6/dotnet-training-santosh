@@ -1,3 +1,5 @@
+namespace Basics;
+
 class Person
 {
     //Members : Methods and fields/properties
