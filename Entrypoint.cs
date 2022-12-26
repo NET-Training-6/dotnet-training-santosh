@@ -95,24 +95,53 @@ class Entrypoint
         // var compoundInterest = principle * Math.Pow((1 + rate / 100), time) - principle;
         // Console.WriteLine($"The compound interest for {principle} for {time} years at {rate} is {compoundInterest}");
         // Console.ReadKey();
-        LearnArray arraytest = new LearnArray();
-        arraytest.LearnArrays();
+        // LearnArray arraytest = new LearnArray();
+        // arraytest.LearnArrays();
 
-        string[] names = new string[10] { "ram", "shyam", "hari", "sita", "gita", "ramesh", "krishna", "sudip", "nagendra", "baje" };
-        foreach (var name in names)
+        // string[] names = new string[10] { "ram", "shyam", "hari", "sita", "gita", "ramesh", "krishna", "sudip", "nagendra", "baje" };
+        // foreach (var name in names)
+        // {
+        //     Console.WriteLine(name);
+        // }
+        // int[] salaries = new int[6] { 15000, 14000, 13500, 12000, 18000, 14000 };
+        // int maxSalary = 0;
+        // foreach (int salary in salaries)
+        // {
+        //     if (salary > maxSalary)
+        //     {
+        //         maxSalary = salary;
+        //     }
+        // }
+        // Console.WriteLine(maxSalary);
+
+        for (byte i = 1; i <= 10; i++)
         {
-            Console.WriteLine(name);
-        }
-        int[] salaries = new int[6] { 15000, 14000, 13500, 12000, 18000, 14000 };
-        int maxSalary = 0;
-        foreach (int salary in salaries)
-        {
-            if (salary > maxSalary)
+            for (byte j = 1; j <= i; j++)
             {
-                maxSalary = salary;
+                Console.Write($"{j} ");
             }
+            Console.WriteLine();
         }
-        Console.WriteLine(maxSalary);
-        Console.ReadKey();
+        Console.WriteLine();
+
+        for (byte i = 1; i <= 10; i++)
+        {
+            for (byte j = 1; j <= i; j++)
+            {
+                Console.Write($"#");
+            }
+            Console.WriteLine();
+        }
+        Console.WriteLine();
+        for (byte i = 10; i > 00; i--)
+        {
+            for (byte j = i; j > 0; j--)
+            {
+                Console.Write($"{j} ");
+            }
+            Console.WriteLine();
+        }
+        //}
+        // Console.ReadKey();
     }
 }
