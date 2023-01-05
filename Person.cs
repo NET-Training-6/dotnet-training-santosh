@@ -4,9 +4,9 @@ class Person
 {
     //Members : Methods and fields/properties
     //Access Modifiers : public, private, internal, protected
-    public string name;
+    public string name = "";
     public byte age; //byte,short,int,long integral types
-    string address;
+    string? address;
     float height;
     float weight;
     DateTime dateOfBirth;

@@ -4,144 +4,59 @@ class Entrypoint
 {
     static void Main()
     {
-        // Console.WriteLine("Inside Console");
+        MethodLearner ml = new();
+        // ml.Print();
+        // ml.Print();
 
-        // //Number Types
-        // int a = 100000; //The int data type can store whole numbers from -2147483648 to 2147483647.
-        // Console.WriteLine(a);
+        // ml.PrintMessage("Print some message with parameter");
+        // ml.PrintMessage("Print another message with argument");
 
-        // long b = 15000000000L; //The long data type can store whole numbers from -9223372036854775808 to 9223372036854775807.
-        // Console.WriteLine(b);
+        // var sum = ml.Add(5.4, 3.2);
+        // Console.WriteLine(sum);
 
-        // float c = 5.75F; //Stores fractional numbers. Sufficient for storing 6 to 7 decimal digits
-        // Console.WriteLine(c);
+        // sum = ml.Add(3.8, 5.9);
+        // Console.WriteLine(sum);
 
-        // double d = 19.99D;//Stores fractional numbers.Sufficient for storing 15 decimal digits
-        // Console.WriteLine(d);
+        // bool isArgumentEven = ml.isNumberEven(5);
 
-        // //Scientific Numbers
-        // float f1 = 35e3F;
-        // double d1 = 12E4D;
-        // Console.WriteLine(f1);
-        // Console.WriteLine(d1);
+        // ml.isNumberEven(6);
+        // var avg = ml.CalculateAverage(num1: 1, num3: 2, num2: 3);
+        // double[] numbersArray = { 15.8889, 21.98, 38.6, 4, 15.8 };
+        // var average = ml.CalculateAverage(numbersArray);
+        // Console.WriteLine(average);
+        // var minimum = ml.FindMinimum(12, 15, 3, 4, 1, 8, 48, 49, -18);
+        // Console.WriteLine($"Minimum Number is {minimum}");
 
-        // //Boolean 
-        // bool isCSharpFun = true;
-        // bool isFishTasty = false;
-        // Console.WriteLine(isCSharpFun);   // Outputs True
-        // Console.WriteLine(isFishTasty);   // Outputs False
-        // Console.WriteLine("Please Enter a Number : ");
-        // var input = Console.ReadLine();
+        // var (sum, product) = ml.GetSumAndProduct(12, 15);
 
-        // int number = int.Parse(input);
+        // Room room1 = new Room();
+        // room1.UpdateOwner("Rajan");
 
-        // if (number % 2 == 0)
-        // {
-        //     Console.WriteLine(number + " is Even");
-        // }
-        // else
-        // {
-        //     Console.WriteLine(number + " is Odd");
-        // }
+        // Room room2 = new Room(roomId: 5, roomBookedBy: "Santosh");
+        // room2.startDateTime = DateTime.Now.AddDays(3);
+        // room1.endDateTime = DateTime.Now.AddDays(5);
 
-        //Interest Calculator
-
-        // Console.WriteLine("Please Enter Principal : ");
-        // var princial = int.Parse(Console.ReadLine());
-
-        // Console.WriteLine("Please Enter Time in years : ");
-        // var time = int.Parse(Console.ReadLine());
-
-        // Console.WriteLine("Please Enter Rate : ");
-        // var rate = int.Parse(Console.ReadLine());
-
-        // var interest = (princial * time * rate) / 100;
-
-        // Console.WriteLine("The intrest for the provided values  is : " + interest);
-        // Console.WriteLine("Press any key to exit");
-        // Console.ReadLine();
-
-        // Console.WriteLine("Please Enter Number To Check If It Is Divisible By 3 And 5 : ");
-        // var number = int.Parse(Console.ReadLine());
-        // if (number % 3 == 0 && number % 5 == 0)
-        // {
-        //     Console.WriteLine(number + " is divisible by both 3 and 5 \n\n");
-        // }
-        // else
-        // {
-        //     Console.WriteLine(number + " is not divisible by both 3 and 5\n\n");
-        // }
-
-        // Console.WriteLine("BMI Calculator");
-        // Console.WriteLine("Please Enter Height In Meters : ");
-        // var height = float.Parse(Console.ReadLine());
-
-        // Console.WriteLine("Please Enter Weight In Kg : ");
-        // var weight = float.Parse(Console.ReadLine());
-
-        // var bmi = weight / (height * height);
-        // Console.WriteLine("BMI for provided values is : " + bmi);
-
-        // Console.Write("Enter Principle : ");
-        // var principle = float.Parse(Console.ReadLine());
-
-        // Console.Write("Enter Time : ");
-        // var time = float.Parse(Console.ReadLine());
-
-        // Console.Write("Enter Rate : ");
-        // var rate = float.Parse(Console.ReadLine());
+        // Console.WriteLine(room2.PrintMessage());
 
 
-        // var compoundInterest = principle * Math.Pow((1 + rate / 100), time) - principle;
-        // Console.WriteLine($"The compound interest for {principle} for {time} years at {rate} is {compoundInterest}");
-        // Console.ReadKey();
-        // LearnArray arraytest = new LearnArray();
-        // arraytest.LearnArrays();
+        // Rectangle rect = new Rectangle(4.2, 5.6);
+        // rect.Area();
+        // rect.Perimeter();
+        // rect.PrintDetails();
 
-        // string[] names = new string[10] { "ram", "shyam", "hari", "sita", "gita", "ramesh", "krishna", "sudip", "nagendra", "baje" };
-        // foreach (var name in names)
-        // {
-        //     Console.WriteLine(name);
-        // }
-        // int[] salaries = new int[6] { 15000, 14000, 13500, 12000, 18000, 14000 };
-        // int maxSalary = 0;
-        // foreach (int salary in salaries)
-        // {
-        //     if (salary > maxSalary)
-        //     {
-        //         maxSalary = salary;
-        //     }
-        // }
-        // Console.WriteLine(maxSalary);
+        // Square square = new Square(side: 5.9);
+        // square.Area();
+        // square.Perimeter();
+        // square.PrintDetails();
 
-        for (byte i = 1; i <= 10; i++)
-        {
-            for (byte j = 1; j <= i; j++)
-            {
-                Console.Write($"{j} ");
-            }
-            Console.WriteLine();
-        }
-        Console.WriteLine();
+        // Triangle triangle = new Triangle(3, 4, 5);
+        // triangle.Area();
+        // triangle.Perimeter();
+        // triangle.PrintDetails();
 
-        for (byte i = 1; i <= 10; i++)
-        {
-            for (byte j = 1; j <= i; j++)
-            {
-                Console.Write($"#");
-            }
-            Console.WriteLine();
-        }
-        Console.WriteLine();
-        for (byte i = 10; i > 00; i--)
-        {
-            for (byte j = i; j > 0; j--)
-            {
-                Console.Write($"{j} ");
-            }
-            Console.WriteLine();
-        }
-        //}
-        // Console.ReadKey();
+        Dell dell = new("Dell G5", "Black");
+        dell.PrintInfo();
+        MSI msi = new("MSI GE 63 Raider", "Silver");
+        msi.PrintInfo();
     }
 }
