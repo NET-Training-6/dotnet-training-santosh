@@ -54,9 +54,47 @@ class Entrypoint
         // triangle.Perimeter();
         // triangle.PrintDetails();
 
-        Dell dell = new("Dell G5", "Black");
-        dell.PrintInfo();
-        MSI msi = new("MSI GE 63 Raider", "Silver");
-        msi.PrintInfo();
+        // Dell dell = new("Dell G5", "Black");
+        // dell.PrintInfo();
+        // MSI msi = new("MSI GE 63 Raider", "Silver");
+        // msi.PrintInfo();
+
+        string address = "Tinkune, Kathmandu-Nepal";
+        var arr = address.Split(new string[] { ",", " ", "-" }, StringSplitOptions.RemoveEmptyEntries);
+        Console.WriteLine($"Locality : {arr[0]} City : {arr[1]},Country : {arr[2]}");
+
+        string news = "Ukraine has said that Kramatorsk and Kherson were shelled head of the unilateral Russian Christmas ceasefire on Friday. Russian President Vladimir Putin ordered a 36-hour unilateral ceasefire in Ukraine from Friday until Saturday but the move was rejected by Kyiv and dismissed as hypocrisy. The US has also expressed skepticism about Putin’s intentions.";
+        string[] sentenceDelimeter = new string[] { ".", "?" };
+        string[] wordsDelimeter = new string[] { " " };
+        string[] charactersDelimeter = new string[] { ",", " ", ".", "?", "-", "'" };
+        var sentences = news.Split(sentenceDelimeter, StringSplitOptions.RemoveEmptyEntries);
+        var words = news.Split(wordsDelimeter, StringSplitOptions.RemoveEmptyEntries);
+        var characters = news.Split(charactersDelimeter, StringSplitOptions.RemoveEmptyEntries);
+        var noOfCharacters = 0;
+        foreach (var sentence in sentences)
+        {
+            Console.WriteLine(sentence);
+        }
+
+        foreach (var word in words)
+        {
+            Console.WriteLine(word);
+        }
+
+        string skipCharacters = " '.,\"*-";
+        foreach (var stringItem in news)
+        {
+            if (skipCharacters.Contains(stringItem) == false)
+            {
+                Console.Write(stringItem);
+                noOfCharacters++;
+            }
+
+        }
+
+
+        Console.WriteLine($"\n\nNo of Sentences : {sentences.Length}, No of words : {words.Length}, No of characters : {noOfCharacters}");
+
+
     }
 }

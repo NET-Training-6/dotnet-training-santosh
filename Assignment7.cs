@@ -4,19 +4,21 @@ class Laptop
     string brand;
     int ramGB;
     string processor;
+
+    public string Processor { get; set; } //Auto-Implemented Properties
     double screenSize;
 
-    public Laptop(string name, string brand, int ram, string processor, double screenSize)
+    public Laptop(string name, string brand, int ram, string Processor, double screenSize)
     {
         this.name = name;
         this.brand = brand;
         this.ramGB = ram;
-        this.processor = processor;
+        this.processor = Processor;
         this.screenSize = screenSize;
     }
     public void PrintInfo()
     {
-        Console.WriteLine($"Name : {name} \n Brand : {brand} \n Ram : {ramGB} \n Processor : {processor} \n Screen Size : {screenSize}");
+        Console.WriteLine($"Name : {name} \nBrand : {brand}\nRam : {ramGB} GB \nProcessor : {Processor} \nScreen Size : {screenSize} \n");
     }
 
 }
