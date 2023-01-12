@@ -58,7 +58,7 @@ class Paragraph
                 uniqueCharacters.Add(character);
             }
         }
-        Console.WriteLine("No Unique Characters : " + uniqueCharacters.Count());
+        Console.WriteLine("No Unique Characters : " + uniqueCharacters.Count() + "\n");
 
         foreach (var item in uniqueCharacters)
         {

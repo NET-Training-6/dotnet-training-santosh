@@ -4,7 +4,7 @@ class Entrypoint
 {
     static void Main()
     {
-        MethodLearner ml = new();
+        //MethodLearner ml = new();
         // ml.Print();
         // ml.Print();
 
@@ -63,11 +63,20 @@ class Entrypoint
         // var arr = address.Split(new string[] { ",", " ", "-" }, StringSplitOptions.RemoveEmptyEntries);
         // Console.WriteLine($"Locality : {arr[0]} City : {arr[1]},Country : {arr[2]}");
 
-        Paragraph para = new();
-        para.DisplayParagraphInfo();
+        // Paragraph para = new();
+        // para.DisplayParagraphInfo();
 
 
+        Generic g = new();
+        g.TestGeneric();
 
+        CollectionLearner collectionLearner = new CollectionLearner();
+        //collectionLearner.LearnLists();
+        collectionLearner.AddNamesToList();
+        // collectionLearner.Assignment1();
+        // collectionLearner.Assignment2();
+        collectionLearner.LearnDictionary();
+        collectionLearner.TupleList();
 
 
 
