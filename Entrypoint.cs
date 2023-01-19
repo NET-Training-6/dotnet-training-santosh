@@ -67,19 +67,24 @@ class Entrypoint
         // para.DisplayParagraphInfo();
 
 
-        Generic g = new();
-        g.TestGeneric();
+        // Generic g = new();
+        // g.TestGeneric();
 
-        CollectionLearner collectionLearner = new CollectionLearner();
-        //collectionLearner.LearnLists();
-        collectionLearner.AddNamesToList();
-        // collectionLearner.Assignment1();
-        // collectionLearner.Assignment2();
-        collectionLearner.LearnDictionary();
-        collectionLearner.TupleList();
+        // CollectionLearner collectionLearner = new CollectionLearner();
+        // //collectionLearner.LearnLists();
+        // collectionLearner.AddNamesToList();
+        // // collectionLearner.Assignment1();
+        // // collectionLearner.Assignment2();
+        // collectionLearner.LearnDictionary();
+        // collectionLearner.TupleList();
 
-
-
+        LinqTutorial lin = new();
+        lin.EvenNumbers();
+        lin.GetAllOddNumbers();
+        lin.GetNumberEndsWithZero();
+        lin.SquareNumbers();
+        lin.GetSquareOfNumbersGraterThan50();
+        lin.FilterName();
 
 
 
