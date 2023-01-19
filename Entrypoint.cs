@@ -79,18 +79,14 @@ class Entrypoint
         // collectionLearner.TupleList();
 
         LinqTutorial lin = new();
-        lin.EvenNumbers();
-        lin.GetAllOddNumbers();
-        lin.GetNumberEndsWithZero();
-        lin.SquareNumbers();
-        lin.GetSquareOfNumbersGraterThan50();
-        lin.FilterName();
+        // lin.EvenNumbers();
+        // lin.GetAllOddNumbers();
+        // lin.GetNumberEndsWithZero();
+        // lin.SquareNumbers();
+        // lin.GetSquareOfNumbersGraterThan50();
+        // lin.FilterName();
 
-
-
-
-
-
+        lin.Assignment();
 
     }
 }
