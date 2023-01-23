@@ -118,7 +118,7 @@ class LinqTutorial
         };
 
         //Sorting countries by area
-        var countriesByArea = countries.OrderBy(country => country.area);
+        var countriesByArea = countries.OrderBy(country => country.area).Take(5);
         //Expression syntax
         countriesByArea = from country in countries orderby country.area select country;
         foreach (var country in countriesByArea)
@@ -136,6 +136,13 @@ class LinqTutorial
             Console.WriteLine($"Country : {country.name}, GDP : {country.gdp.ToString("N0")} ");
         }
 
+        //Sorting asian countries
+        var asianCountries = countries.Where(country => country.continent == "Asia");
+        Console.WriteLine("\n\n");
+        foreach (var country in countriesByGDP)
+        {
+            Console.WriteLine($"Country : {country.name}, GDP : {country.gdp.ToString("N0")} ");
+        }
     }
 
     public void LinqDay2()
@@ -151,9 +158,6 @@ class LinqTutorial
 
         //4. Get 5 elements skipping first 2 from "numbers"
         var skipTwo = numbers.Skip(2).Take(5);
-
-
-
 
 
     }

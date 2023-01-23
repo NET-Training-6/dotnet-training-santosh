@@ -78,7 +78,7 @@ class Entrypoint
         // collectionLearner.LearnDictionary();
         // collectionLearner.TupleList();
 
-        LinqTutorial lin = new();
+        // LinqTutorial lin = new();
         // lin.EvenNumbers();
         // lin.GetAllOddNumbers();
         // lin.GetNumberEndsWithZero();
@@ -86,7 +86,9 @@ class Entrypoint
         // lin.GetSquareOfNumbersGraterThan50();
         // lin.FilterName();
 
-        lin.Assignment();
+        // lin.Assignment();
+        FileOperations fileOperations = new();
+        fileOperations.LearnFileOperations();
 
     }
 }
