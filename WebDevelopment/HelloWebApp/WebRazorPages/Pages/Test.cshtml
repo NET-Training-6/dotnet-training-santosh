@@ -6,26 +6,24 @@
 {
     <b>@i</b>
 }
-
+    <br /><br />
 <h3>Print all even numbers from 1 to 100</h3>
-<ul>
+
     @for (int i = 1; i <= 100; i++)
     {
         if (i % 2 == 0)
         {
-            <li>@i</li>
+            <b>@i</b>
         }
     }
-</ul>
-
+    <br /><br />
 <h3>Numbers containing 9 in it from  1 to 100</h3>
 
-<ul>
     @for(var i = 0; i <= 100; i++)
     {
         if (i.ToString().Contains("9"))
         {
-            <li>@i</li>
+            <b>@i</b>
         }
     }
-</ul>
+    <br /><br />
