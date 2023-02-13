@@ -1,0 +1,43 @@
+﻿@model List<Employee>
+
+
+<h1>Employees</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Address</th>
+      <th scope="col">Details</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (var emp in Model)
+    {
+        <tr>
+            <td>@emp.Id</td>
+            <td>@emp.Name</td>
+            <td>@emp.Address</td>
+            <td>
+                <span><a asp-controller="Employees" asp-action="Detail" asp-route-id="@emp.Id" class="btn btn-sm"><i class="bi bi-eye"></i></a></span>
+                <span><a asp-controller="Employees" asp-action="Edit" asp-route-id="@emp.Id" class="btn btn-default btn-sm text-primary"><i class="bi bi-pencil"></i></a></span>
+                <span><button onclick="deleteEmployee(@emp.Id,'@emp.Name')" class="btn btn-sm text-danger"><i class="bi bi-trash"></i></button></span>
+            </td>
+        </tr> 
+    }
+
+  </tbody>
+</table>
+
+<script>
+    function deleteEmployee(id,name){
+        if(confirm("Are you sure you want to delete employee "+name)){
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", '@Url.Content("/employees/delete")/'+id, false);
+            xhr.send();
+            //window.Location.replace('/employees');
+            window.location.replace("/employees");
+        }
+    }
+</script>

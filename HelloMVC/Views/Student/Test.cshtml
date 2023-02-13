@@ -1,0 +1,14 @@
+﻿@model string[]
+
+@{
+    var names = Model;
+}
+<h1>This is test page</h1>
+
+<ol>
+    @foreach(string name in names)
+    {
+        <li>@name</li>
+    }
+
+</ol>

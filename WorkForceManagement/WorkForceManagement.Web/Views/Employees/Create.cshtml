@@ -1,0 +1,60 @@
+﻿@model Employee
+
+@using WorkForceManagement.Web.Enums;
+@{
+    string[] genders = Enum.GetNames<Gender>();
+}
+<h1>Add Employee</h1>
+
+<form action="/employees/create" method="post">
+    <div >
+        <label asp-for=Name></label>
+        <input asp-for=Name class="form-control"/>
+    </div>
+    <div >
+        <label asp-for="Address"></label>
+        <input asp-for="Address" class="form-control">
+    </div>
+    <div>
+        <label>Gender</label>
+        <div>
+            @foreach (var gender in genders)
+            {
+                 <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="gender" id="@gender" value="@gender">
+              <label class="form-check-label" for="@gender">
+                        @gender
+              </label>
+            </div>
+
+            }
+        </div>
+    </div>
+    <hr/>
+
+    <div>
+          <label asp-for="DateOfBirth"></label>
+          <input asp-for="DateOfBirth" class="form-control"/>
+      </div>
+      <div>
+          <label asp-for="Contact"></label>
+          <input asp-for="Contact" class="form-control"/>
+      </div>
+      <div>
+          <label asp-for="JoinDate"></label>
+          <input asp-for="JoinDate" class="form-control"/>
+      </div>
+      <div>
+          <label asp-for="Department">Department</label>
+          <input asp-for=Department class="form-control"/>
+      </div>
+      <div>
+          <label asp-for="Designation">Designation</label>
+          <input asp-for=Designation class="form-control"/>
+      </div>
+      <br />
+  <div class="col-auto">
+    <button type="submit" class="btn btn-primary mb-3">Save</button>
+  </div>
+
+</form>
