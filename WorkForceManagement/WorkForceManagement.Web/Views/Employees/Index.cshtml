@@ -29,15 +29,16 @@
 
   </tbody>
 </table>
-
-<script>
-    function deleteEmployee(id,name){
-        if(confirm("Are you sure you want to delete employee "+name)){
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", '@Url.Content("/employees/delete")/'+id, false);
-            xhr.send();
-            //window.Location.replace('/employees');
-            window.location.replace("/employees");
+@section Scripts{
+        <script>
+        function deleteEmployee(id,name){
+            if(confirm("Are you sure you want to delete employee "+name)){
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", '@Url.Content("/employees/delete")/'+id, false);
+                xhr.send();
+                //window.Location.replace('/employees');
+                window.location.replace("/employees");
+            }
         }
-    }
-</script>
+    </script>
+}
